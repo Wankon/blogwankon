@@ -1,0 +1,26 @@
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+
+
+<h1>全ての投稿一覧</h1>
+
+<h2>過去に投稿した内容</h2>
+
+<table align="center">
+  <tr>
+    <th><h4>タイトル</h4></th>
+    <th><h4>内容</h4></th>
+  </tr>
+
+  <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.text %></td>
+        <td><%= blog.file %></td>        
+        <td><%=link_to "編集する",edit_blog_path(blog.id) %></td>
+      </tr>
+  <% end %>
+</table>
+<h3><%=link_to "投稿する",new_blog_path %></h3>
+</div>
+</div>
