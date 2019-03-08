@@ -15,8 +15,7 @@
   <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
-        <td><%= blog.text %></td>
-        <td><%= blog.file %></td>        
+        <td><%= blog.text %></td>       
         <td><%=link_to "編集する",edit_blog_path(blog.id) %></td>
       </tr>
   <% end %>
